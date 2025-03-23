@@ -42,7 +42,7 @@ namespace S7.Net
         /// <summary>
         /// PORT Number of the PLC, default is 102
         /// </summary>
-        public int Port { get; }
+        public int Port { get; private set; }
 
         /// <summary>
         /// The TSAP addresses used during the connection request.
@@ -150,6 +150,7 @@ namespace S7.Net
                     nameof(cpu));
 
             CPU = cpu;
+            Port = port;
             Rack = rack;
             Slot = slot;
         }
